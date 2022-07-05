@@ -12,5 +12,3 @@ console.log("Express started at port 3000");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/rate',rateController);
-
-exports.app = functions.https.onRequest(app);
