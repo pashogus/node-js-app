@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-var dataSchema = new mongoose.Schema(
+var dataPrimarySchema = new mongoose.Schema(
     {
-        _id:Date,
+        _id: Date,
     list: [
         {
             category: String,
@@ -11,4 +11,4 @@ var dataSchema = new mongoose.Schema(
         }]
     });
    
-    module.exports = mongoose.model("data",dataSchema);
+    module.exports = mongoose.model("dataPrimary",dataPrimarySchema);
