@@ -4,6 +4,7 @@ const bodyParser=require('body-parser');
 const rateController = require('./Controller/rateController.js');
 const data = require('./Controller/dataController.js');
 const datePrimary = require('./Controller/datePrimaryController.js');
+const user = require('./Controller/userController.js');
 const path = __dirname + '/static/';
 const cors = require('cors');
 
@@ -33,3 +34,4 @@ app.get('/', function (req,res) {
 app.use('/rate',rateController);
 app.use('/data',data);
 app.use('/datePrimary',datePrimary);
+app.use('/user',user);

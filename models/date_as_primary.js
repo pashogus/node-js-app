@@ -7,7 +7,8 @@ var dataPrimarySchema = new mongoose.Schema(
             category: String,
             item: String,
             qty: Number,
-            price: Number
+            price: Number,
+            user:String
         }]
     });
    
