@@ -116,5 +116,26 @@ router.put("/v1",(req,res)=>
    
 });
 
+router.post("/range/v1",(req,res)=>
+{
+    let  fromdate=new Date(req.body.from_date);
+    let  todate=new Date(req.body.to_date);
+    dataModel.find({_id:{
+        $gte: fromdate,
+        $lt: todate
+    }}, (err,response)=>
+    {
+        if(err)
+        {
+            res.send(err);
+        }
+        else
+        {
+            res.send(response);
+        }
+    });
+   
+});
+
 
 module.exports=router;

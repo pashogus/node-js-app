@@ -6,7 +6,7 @@ var dataSchema = new mongoose.Schema(
         {
             category: String,
             item: String,
-            qty: Number,
+            qty: String,
             price: Number,
             user:String,
             payment:String,
